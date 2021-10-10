@@ -1,0 +1,150 @@
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 6/26/2020 4:39:00 PM
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting RomaniaRoleplay/RomaniaRoleplay resource..
+RomaniaRoleplay/RomaniaRoleplay: setting as Gamemode resource
+RomaniaRoleplay/RomaniaRoleplay: loading scripts.. found 1 script(s)
+RomaniaRoleplay/RomaniaRoleplay: instantiating RomaniaRoleplay.Controllers.RomaniaRoleplayController..
+RomaniaRoleplay/RomaniaRoleplay: loading server events.. found 4 server event(s)
+RomaniaRoleplay/RomaniaRoleplay: loaded 4 server events(s)
+RomaniaRoleplay/RomaniaRoleplay: loading commands.. found 3 command(s)
+RomaniaRoleplay/RomaniaRoleplay: loaded 3 commands(s)
+RomaniaRoleplay/RomaniaRoleplay: loading remote events.. found 3 remote event(s)
+RomaniaRoleplay/RomaniaRoleplay: loaded 3 remote event(s)
+-> Resource RomaniaRoleplay/RomaniaRoleplay started!
+Started! Waiting for connections..
+DEPRECATE: SetPlayerNametag is deprecated.
+DEPRECATE: SetPlayerNametag is deprecated.
+[04:44:00][1]John_Marston: tsda
+[04:44:05][1]John_Marston: OHOO
+[04:44:35][1]John_Marston: Aratam oribil, amandoi, perfect =))
+[04:44:37][0]Dana: :))
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '0' for key 'UNIQUE'
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '0' for key 'UNIQUE'
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/Core/CommandExecutor.cs:line 62
+   at DbDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlCommand.cs:line 217
+   at DbDataReader System.Data.Common.DbCommand.ExecuteReader()
+   at RelationalDataReader Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at void Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at void Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at int Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable<ModificationCommandBatch> commandBatches, IRelationalConnection connection)
+   at int Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList<IUpdateEntry> entries)
+   at int Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList<IUpdateEntry> entriesToSave)
+   at int Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, bool acceptAllChangesOnSuccess)
+   at TResult Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute<TState, TResult>(TState state, Func<DbContext, TState, TResult> operation, Func<DbContext, TState, ExecutionResult<TResult>> verifySucceeded)
+   at int Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(bool acceptAllChangesOnSuccess)
+   at int Microsoft.EntityFrameworkCore.DbContext.SaveChanges(bool acceptAllChangesOnSuccess)
+   at int Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Character DataLayer.Characters.CharactersRepository.Create(Character entity) in D:/Games/RAGEMP/server-files/dotnet/resources/RomaniaRoleplay/DataLayer/Characters/CharactersRepository.cs:line 18
+   at Character BusinessLogic.Characters.CharactersWorker.Create(int userId, string name, Skin skin) in D:/Games/RAGEMP/server-files/dotnet/resources/RomaniaRoleplay/BusinessLogic/Characters/CharactersWorker.cs:line 50
+   at void RomaniaRoleplay.Controllers.RomaniaRoleplayController.CreateCharacter(Player player, string characterJson) in D:/Games/RAGEMP/server-files/dotnet/resources/RomaniaRoleplay/RomaniaRoleplay/Controllers/CharacterController.cs:line 27
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '0' for key 'UNIQUE'
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '0' for key 'UNIQUE'
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/Core/CommandExecutor.cs:line 62
+   at DbDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlCommand.cs:line 217
+   at DbDataReader System.Data.Common.DbCommand.ExecuteReader()
+   at RelationalDataReader Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at void Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at void Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at int Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable<ModificationCommandBatch> commandBatches, IRelationalConnection connection)
+   at int Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList<IUpdateEntry> entries)
+   at int Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList<IUpdateEntry> entriesToSave)
+   at int Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, bool acceptAllChangesOnSuccess)
+   at TResult Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute<TState, TResult>(TState state, Func<DbContext, TState, TResult> operation, Func<DbContext, TState, ExecutionResult<TResult>> verifySucceeded)
+   at int Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(bool acceptAllChangesOnSuccess)
+   at int Microsoft.EntityFrameworkCore.DbContext.SaveChanges(bool acceptAllChangesOnSuccess)
+   at int Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Character DataLayer.Characters.CharactersRepository.Create(Character entity) in D:/Games/RAGEMP/server-files/dotnet/resources/RomaniaRoleplay/DataLayer/Characters/CharactersRepository.cs:line 18
+   at Character BusinessLogic.Characters.CharactersWorker.Create(int userId, string name, Skin skin) in D:/Games/RAGEMP/server-files/dotnet/resources/RomaniaRoleplay/BusinessLogic/Characters/CharactersWorker.cs:line 50
+   at void RomaniaRoleplay.Controllers.RomaniaRoleplayController.CreateCharacter(Player player, string characterJson) in D:/Games/RAGEMP/server-files/dotnet/resources/RomaniaRoleplay/RomaniaRoleplay/Controllers/CharacterController.cs:line 27
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[04:45:16][0]Dana: nu merge nametagul din pacate
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '0' for key 'UNIQUE'
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '0' for key 'UNIQUE'
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/Core/CommandExecutor.cs:line 62
+   at DbDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlCommand.cs:line 217
+   at DbDataReader System.Data.Common.DbCommand.ExecuteReader()
+   at RelationalDataReader Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at void Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at void Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at int Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable<ModificationCommandBatch> commandBatches, IRelationalConnection connection)
+   at int Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList<IUpdateEntry> entries)
+   at int Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList<IUpdateEntry> entriesToSave)
+   at int Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, bool acceptAllChangesOnSuccess)
+   at TResult Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute<TState, TResult>(TState state, Func<DbContext, TState, TResult> operation, Func<DbContext, TState, ExecutionResult<TResult>> verifySucceeded)
+   at int Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(bool acceptAllChangesOnSuccess)
+   at int Microsoft.EntityFrameworkCore.DbContext.SaveChanges(bool acceptAllChangesOnSuccess)
+   at int Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Character DataLayer.Characters.CharactersRepository.Create(Character entity) in D:/Games/RAGEMP/server-files/dotnet/resources/RomaniaRoleplay/DataLayer/Characters/CharactersRepository.cs:line 18
+   at Character BusinessLogic.Characters.CharactersWorker.Create(int userId, string name, Skin skin) in D:/Games/RAGEMP/server-files/dotnet/resources/RomaniaRoleplay/BusinessLogic/Characters/CharactersWorker.cs:line 50
+   at void RomaniaRoleplay.Controllers.RomaniaRoleplayController.CreateCharacter(Player player, string characterJson) in D:/Games/RAGEMP/server-files/dotnet/resources/RomaniaRoleplay/RomaniaRoleplay/Controllers/CharacterController.cs:line 27
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '0' for key 'UNIQUE'
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '0' for key 'UNIQUE'
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/Core/CommandExecutor.cs:line 62
+   at DbDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlCommand.cs:line 217
+   at DbDataReader System.Data.Common.DbCommand.ExecuteReader()
+   at RelationalDataReader Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at void Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at void Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at int Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable<ModificationCommandBatch> commandBatches, IRelationalConnection connection)
+   at int Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList<IUpdateEntry> entries)
+   at int Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList<IUpdateEntry> entriesToSave)
+   at int Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, bool acceptAllChangesOnSuccess)
+   at TResult Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute<TState, TResult>(TState state, Func<DbContext, TState, TResult> operation, Func<DbContext, TState, ExecutionResult<TResult>> verifySucceeded)
+   at int Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(bool acceptAllChangesOnSuccess)
+   at int Microsoft.EntityFrameworkCore.DbContext.SaveChanges(bool acceptAllChangesOnSuccess)
+   at int Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Character DataLayer.Characters.CharactersRepository.Create(Character entity) in D:/Games/RAGEMP/server-files/dotnet/resources/RomaniaRoleplay/DataLayer/Characters/CharactersRepository.cs:line 18
+   at Character BusinessLogic.Characters.CharactersWorker.Create(int userId, string name, Skin skin) in D:/Games/RAGEMP/server-files/dotnet/resources/RomaniaRoleplay/BusinessLogic/Characters/CharactersWorker.cs:line 50
+   at void RomaniaRoleplay.Controllers.RomaniaRoleplayController.CreateCharacter(Player player, string characterJson) in D:/Games/RAGEMP/server-files/dotnet/resources/RomaniaRoleplay/RomaniaRoleplay/Controllers/CharacterController.cs:line 27
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '0' for key 'UNIQUE'
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '0' for key 'UNIQUE'
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/m

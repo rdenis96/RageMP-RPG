@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "NaggaRPG": {
+      "commandName": "Executable",
+      "executablePath": "D:\\Games\\RAGEMP\\server-files\\ragemp-server.exe",
+      "workingDirectory": "D:\\Games\\RAGEMP\\server-files"
+    }
+  }
+}

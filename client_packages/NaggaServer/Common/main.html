@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="naggaApp">
+
+<head>
+    <title>Main - Nagga - RPG</title>
+
+    <link href="../Resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link href="../Resources/angularjs/Toastr/angular-toastr.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="../Resources/jQuery/jquery.min.js"></script>
+	<script src="../Resources/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../Resources/angularjs/angular.min.js"></script>
+	<script src="../Resources/angularjs/Toastr/angular-toastr.tpls.min.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" rel="stylesheet">
+
+    <script src="script.js"></script>
+    
+    <!--Custom styles-->
+    <link rel="stylesheet" type="text/css" href="../LoginRegister/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../StatsCard/style.css"> -->
+</head>
+
+<body ng-controller="mainController" id="mainController">
+    <div ng-show="activePage === clientPages.loginRegister" ng-include="'../LoginRegister/index.html'" ng-controller="loginRegisterController" id="loginRegisterController"></div>
+    <div ng-show="activePage === clientPages.infoCard" ng-include="'../StatsCard/index.html'" ng-controller="statsCardController" id="statsCardController"></div>
+</body>
+
+</html>

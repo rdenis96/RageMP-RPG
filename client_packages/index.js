@@ -1,0 +1,1 @@
+require('NaggaRPG/index.js');
